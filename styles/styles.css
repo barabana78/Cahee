@@ -21,16 +21,31 @@ a {
   display: block;
   clear: both;
 }
-button:hover {
+.btn-link:hover {
   opacity: 0.7;
   cursor: pointer;
+}
+h2 {
+  font-size: 90px;
+  color: #ffffff;
+  margin-bottom: 6px;
+}
+.btn-link {
+  width: 200px;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  color: #ffffff;
+  text-transform: uppercase;
 }
 /*HEADER*/
 header {
   background: #f9f8fb url("../images/bgHeader.jpg") no-repeat 0 0;
   margin: 0 auto;
   width: 1500px;
-  /*height: 100vh;*/
+  /*min-height: 100vh;*/
   position: relative;
 }
     /*HEADER-NAV*/
@@ -50,6 +65,7 @@ header {
   font-weight: bold;
   text-transform: uppercase;
 }
+
 .nav-decor:hover {
   border-top: 3px solid red;
 }
@@ -75,13 +91,8 @@ header {
   letter-spacing: -0.6px;
   margin-bottom: 26px;
 }
-.header-info button {
-  width: 200px;
-  height: 55px;
+.btn-link--red {
   background-color: #ff6033;
-  font-size: 20px;
-  color: #ffffff;
-  text-transform: uppercase;
 }
     /*SCROLL*/
 .scroll {
@@ -106,15 +117,108 @@ header {
 .about-us-info a:hover {
   text-decoration: underline;
   color: #ffffff;
-}
-.about-us-info a h1 {
   font-size: 90px;
-  color: #ffffff;
-  margin-bottom: 6px;
 }
 .about-us-info p {
   font-size: 17px;
   font-weight: 300;
   line-height: 1.59;
   padding-bottom: 11px;
+}
+      /*Our Services*/
+.our-services {
+  background: #70bfff url("../images/ourServices.png") no-repeat 869px 103px;
+}
+.our-services h2:hover {
+  text-decoration: underline;
+  color: #ffffff;
+  font-size: 90px;
+}
+.link-group {
+  padding: 180px 0 128px 98px;
+  float: left;
+}
+.link-item {
+  width: 400px;
+  height: 100px;
+  padding-right: 100px;
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 27px;
+  display: flex;
+  box-shadow: 0 0 20px rgba(78, 133, 178, 0.9);
+}
+.link-item:hover {
+  box-shadow: 0 0 30px rgba(100, 50, 178, 0.9);
+}
+.link-item span {
+  margin: auto;
+  text-align: center;
+}
+.link-item:nth-child(1) {
+  background: #ffffff url("../images/iconOurServ1.svg") no-repeat 330px 25px;
+}
+.link-item:nth-child(2) {
+  background: #ffffff url("../images/iconOurServ2.svg") no-repeat 330px 25px;
+}
+.link-item:nth-child(3) {
+  background: #ffffff url("../images/iconOurServ3.svg") no-repeat 330px 25px;
+}
+.link-item:nth-child(4) {
+  background: #ffffff url("../images/iconOurServ4.svg") no-repeat 330px 25px;
+}
+.our-services > a {
+  display: block;
+  float: right;
+  margin-top: 312px;
+}
+         /*GALLERY*/
+.gallery {
+  background-color: yellow;
+}
+.gallery h2 {
+  color: black;
+}
+.galery-link-title {
+  text-align: center;
+  display: block;
+  padding-top: 50px;
+}
+.galery-link-title:hover {
+  text-decoration: underline;
+  color: black;
+  font-size: 90px;
+}
+.gallery p {
+  margin: 30px auto;
+  width: 700px;
+  text-align: center;
+}
+.row {
+  overflow: hidden;
+}
+.cell {
+  float: left;
+  padding: 0 15px;
+}
+.cell.size-50 {
+  width: 50%;
+}
+.cell.size-66 {
+  width: 66.6%;
+}
+.cell.size-33 {
+  width: 33.3%;
+}
+img {
+  width: auto;
+  max-width: 100%;
+}
+.padding-bottom {
+padding-bottom: 30px;
+}
+.btn-link--blue {
+  background-color: #2a2a80;
+  margin: 0 auto;
 }

@@ -10,38 +10,41 @@
 <body>
 <!--HEADER-->
 <header>
-<div class="wrapper">
-  <!--LOGO AND NAV-->
-  <div class="header__nav">
-    <img src="./images/logo.png" alt="logo">
-    <nav>
-      <div class="link__nav-decor">home</div>
-      <div class="link__nav-decor">about</div>
-      <div class="link__nav-decor">services</div>
-      <div class="link__nav-decor">gallery</div>
-      <div class="link__nav-decor">blog</div>
-      <div class="link__nav-decor">contact</div>
-    </nav>
+  <div class="wrapper">
+    <!--LOGO AND NAV-->
+    <div class="header__nav">
+      <img src="./images/logo.png" alt="logo">
+      <nav>
+        <div class="link__nav-decor"><a href="/">home</a></div>
+        <div class="link__nav-decor"><a href="#scroll">about</a></div>
+        <div class="link__nav-decor"><a href="#services">services</a></div>
+        <div class="link__nav-decor"><a href="#gallery">gallery</a></div>
+        <div class="link__nav-decor"><a href="#blog">blog</a></div>
+        <div class="link__nav-decor"><a href="#contact">contact</a></div>
+      </nav>
+    </div>
+    <!--/LOGO AND NAV-->
+    <!--HEADER INFO-->
+    <section class="header__info">
+      <h1>Fresh Life</h1>
+      <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+        exercitation ullamco.</p>
+      <a class="link-btn link-btn_orange" href="#"> get free now</a>
+      <a class="scroll" href="#scroll"><img src="./images/scroll.png" alt="scroll"></a>
+    </section>
+    <!--/HEADER INFO-->
   </div>
-  <!--/LOGO AND NAV-->
-  <!--HEADER INFO-->
-  <section class="header__info">
-    <h1>Fresh Life</h1>
-    <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-    <a class="link-btn link-btn_orange" href="#"> get free now</a>
-    <a class="scroll" href="#"><img src="./images/scroll.png" alt="scroll"></a>
-  </section>
-  <!--/HEADER INFO-->
-</div>
 </header>
 <!--ABOUT US-->
-<section class="about-us">
+<section class="about-us" id="scroll">
   <div class="about-us__flex-cont wrapper">
     <img src="./images/about.png" alt="pic">
     <div class="about-us__info">
-    <a href="#"><h2>About Us</h2></a>
-    <p>Abore Cahee magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
-    <p>Nim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.</p>
+      <a href="#"><h2>About Us</h2></a>
+      <p>Abore Cahee magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+        ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
+      <p>Nim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+        laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.</p>
     </div>
   </div>
 </section>
@@ -78,7 +81,7 @@
     </div>
 
     <div class="our-services__info">
-      <a href="#"><h2>Our Services</h2></a>
+      <a href="#"><h2 id="services">Our Services</h2></a>
     </div>
   </div>
 </section>
@@ -87,19 +90,24 @@
 <!--GALLERY-->
 <section class="gallery">
   <div class="gallery__flex-container wrapper">
-    <a href="#"><h2>Gallery</h2></a>
-    <p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <a href="#"><h2 id="gallery">Gallery</h2></a>
+    <p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
     <div class="gallery__img-container">
       <div class="row padding-bottom">
-        <div><a href="#"><img src="./images/img1.png" alt="pic"></a> </div>
+        <div><a href="#"><img src="./images/img1.png" alt="pic"></a></div>
         <div>
-          <div class="padding-bottom"> <a href="#"><img src="./images/img2.png" alt="pic"></a></div>
-          <div> <a href="#"><img src="./images/img3.png" alt="pic"></a></div>
+          <div class="padding-bottom"><a href="#"><img src="./images/img2.png" alt="pic"></a></div>
+          <div><a href="#"><img src="./images/img3.png" alt="pic"></a></div>
         </div>
       </div>
       <div class="row">
-        <div><div> <a href="#"><img src="./images/img4.png" alt="pic"></a></div></div>
-        <div><div> <a href="#"><img src="./images/img5.png" alt="pic"></a></div></div>
+        <div>
+          <div><a href="#"><img src="./images/img4.png" alt="pic"></a></div>
+        </div>
+        <div>
+          <div><a href="#"><img src="./images/img5.png" alt="pic"></a></div>
+        </div>
       </div>
     </div>
     <a class="link-btn link-btn_blu" href="#"> get free now</a>
@@ -109,40 +117,42 @@
 
 <!--SUB-->
 <section class="sub">
-<div class="sub__flex-container wrapper">
-  <h3>Subscribe To Us</h3>
-  <p>Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-  <form method="get" novalidate>
-    <label>
-      <input type="email" placeholder="Your email address...">
-    </label>
-    <button class="link-btn link-btn-green" type="submit">subscribe</button>
-  </form>
-</div>
+  <div class="sub__flex-container wrapper">
+    <h3>Subscribe To Us</h3>
+    <p>Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      Ut enim ad minim veniam.</p>
+    <form method="get" novalidate>
+      <label>
+        <input type="email" placeholder="Your email address...">
+      </label>
+      <button class="link-btn link-btn-green" type="submit">subscribe</button>
+    </form>
+  </div>
 </section>
 <!--/SUB-->
 
 <!--BLOG-->
 <section class="blog">
   <div class="gallery__flex-container wrapper">
-    <h2>Blog</h2>
-    <p>Dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit.</p>
+    <h2 id="blog">Blog</h2>
+    <p>Dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit.</p>
     <div class="blog__img-group">
-    <div class="blog__img">
-      <a href="#"><img src="./images/blog1.png" alt="pic"></a>
-      <img class="day" src="./images/day1.png" alt="day">
-      <p class="img-title">Green Smoothies: Too Much of a Good Thing?<br/><span>By Auskteez - 2 hours ago</span></p>
-    </div>
-    <div class="blog__img">
-      <a href="#"><img src="./images/blog2.png" alt="pic"></a>
-      <img class="day" src="./images/day2.png" alt="day">
-      <p class="img-title">Growing Food and a “Thirst” for Innovation<br/><span>By Auskteez - 3 hours ago</span></p>
-    </div>
-    <div class="blog__img">
-      <a class="blog__img-item" href="#"><img src="./images/blog3.png" alt="pic"></a>
-      <img class="day" src="./images/day3.png" alt="day">
-      <p class="img-title">Pesticides & Food: What You Need to Know<br/><span>By Auskteez - 6 hours ago</span></p>
-    </div>
+      <div class="blog__img">
+        <a href="#"><img src="./images/blog1.png" alt="pic"></a>
+        <img class="day" src="./images/day1.png" alt="day">
+        <p class="img-title">Green Smoothies: Too Much of a Good Thing?<br/><span>By Auskteez - 2 hours ago</span></p>
+      </div>
+      <div class="blog__img">
+        <a href="#"><img src="./images/blog2.png" alt="pic"></a>
+        <img class="day" src="./images/day2.png" alt="day">
+        <p class="img-title">Growing Food and a “Thirst” for Innovation<br/><span>By Auskteez - 3 hours ago</span></p>
+      </div>
+      <div class="blog__img">
+        <a class="blog__img-item" href="#"><img src="./images/blog3.png" alt="pic"></a>
+        <img class="day" src="./images/day3.png" alt="day">
+        <p class="img-title">Pesticides & Food: What You Need to Know<br/><span>By Auskteez - 6 hours ago</span></p>
+      </div>
     </div>
     <a class="link-btn link-btn_red" href="#">get free now</a>
   </div>
@@ -151,15 +161,15 @@
 <!--CONTACTS-->
 <section class="contact">
   <div class="gallery__flex-container wrapper">
-    <h2>Contact</h2>
+    <h2 id="contact">Contact</h2>
     <p>For new projects, ideas, business or anything
       you'd like to discuss, contact with me!</p>
     <div class="form-container">
       <form method="get" action="#">
-        <input type="text" placeholder="Youre address..." name="address">
-        <input type="email" placeholder="Your email..." name="email">
-        <input type="tel" placeholder="Your phone number..." name="tel">
-        <textarea placeholder="Your messege..." name="messege" rows="7"></textarea>
+        <label><input type="text" placeholder="Youre address..." name="address"></label>
+        <label><input type="email" placeholder="Your email..." name="email"></label>
+        <label><input type="tel" placeholder="Your phone number..." name="tel"></label>
+        <label><textarea placeholder="Your messege..." name="messege" rows="7"></textarea></label>
         <button class="link-btn link-btn-fly" type="submit">Submit</button>
       </form>
       <ul>
@@ -171,5 +181,14 @@
   </div>
 </section>
 <!--/CONTACTS-->
+<!--FOOTER-->
+<footer class="footer">
+  <div class="footer__flex-container wrapper">
+    <div>© 2015 Company. All right reserved.</div>
+    <div><a href="#"><img src="./images/logo-small.png" alt="logo"></a></div>
+    <div>Made with<span> love </span>by Auskteez</div>
+  </div>
+</footer>
+<!--/FOOTER-->
 </body>
 </html>

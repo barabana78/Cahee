@@ -256,7 +256,7 @@ h1 {
 .sub form {
   display: flex;
   justify-content: space-between;
-  width: 800px;
+  /*width: 800px;*/
 }
 .sub input {
   display: block;
@@ -267,6 +267,7 @@ h1 {
 }
 .link-btn-green {
   background-color: #96b92c;
+  margin-left: 20px;
 }
 /*BLOG*/
 .blog {

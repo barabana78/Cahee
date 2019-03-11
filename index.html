@@ -2,10 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Cahee</title>
   <link href="styles/styles.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,700,800,900" rel="stylesheet">
   <link rel="shortcat icon" href="favicon.png">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 </head>
 <body>
 <!--HEADER-->
@@ -14,7 +16,8 @@
     <!--LOGO AND NAV-->
     <div class="header__nav">
       <img src="./images/logo.png" alt="logo">
-      <nav>
+
+      <nav class="desktop-menu">
         <div class="link__nav-decor"><a href="/">home</a></div>
         <div class="link__nav-decor"><a href="#scroll">about</a></div>
         <div class="link__nav-decor"><a href="#services">services</a></div>
@@ -22,6 +25,20 @@
         <div class="link__nav-decor"><a href="#blog">blog</a></div>
         <div class="link__nav-decor"><a href="#contact">contact</a></div>
       </nav>
+
+      <div class="mobile-menu">
+        <label for="menu-toggle"><i class="fas fa-list fa-2x"></i></label>
+        <input id="menu-toggle" type="checkbox" hidden>
+        <nav class="dropdown-menu">
+          <div class="link__nav-decor"><a href="/">home</a></div>
+          <div class="link__nav-decor"><a href="#scroll">about</a></div>
+          <div class="link__nav-decor"><a href="#services">services</a></div>
+          <div class="link__nav-decor"><a href="#gallery">gallery</a></div>
+          <div class="link__nav-decor"><a href="#blog">blog</a></div>
+          <div class="link__nav-decor"><a href="#contact">contact</a></div>
+        </nav>
+
+      </div>
     </div>
     <!--/LOGO AND NAV-->
     <!--HEADER INFO-->
@@ -30,15 +47,15 @@
       <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
         exercitation ullamco.</p>
       <a class="link-btn link-btn_orange" href="#"> get free now</a>
-      <a class="scroll" href="#scroll"><img src="./images/scroll.png" alt="scroll"></a>
     </section>
     <!--/HEADER INFO-->
+    <a class="scroll" href="#scroll"><img src="./images/scroll.png" alt="scroll"></a>
   </div>
 </header>
 <!--ABOUT US-->
 <section class="about-us" id="scroll">
   <div class="about-us__flex-cont wrapper">
-    <img src="./images/about.png" alt="pic">
+    <div><img src="./images/about.png" alt="pic"></div>
     <div class="about-us__info">
       <a href="#"><h2>About Us</h2></a>
       <p>Abore Cahee magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
@@ -95,19 +112,15 @@
       veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
     <div class="gallery__img-container">
       <div class="row padding-bottom">
-        <div><a href="#"><img src="./images/img1.png" alt="pic"></a></div>
+        <a href="#"><img src="./images/img1.png" alt="pic"></a>
         <div>
-          <div class="padding-bottom"><a href="#"><img src="./images/img2.png" alt="pic"></a></div>
+          <div><a href="#"><img src="./images/img2.png" alt="pic"></a></div>
           <div><a href="#"><img src="./images/img3.png" alt="pic"></a></div>
         </div>
       </div>
       <div class="row">
-        <div>
-          <div><a href="#"><img src="./images/img4.png" alt="pic"></a></div>
-        </div>
-        <div>
-          <div><a href="#"><img src="./images/img5.png" alt="pic"></a></div>
-        </div>
+        <div><a href="#"><img src="./images/img4.png" alt="pic"></a></div>
+        <div><a href="#"><img src="./images/img5.png" alt="pic"></a></div>
       </div>
     </div>
     <a class="link-btn link-btn_blu" href="#"> get free now</a>
@@ -141,17 +154,17 @@
       <div class="blog__img">
         <a href="#"><img src="./images/blog1.png" alt="pic"></a>
         <img class="day" src="./images/day1.png" alt="day">
-        <p class="img-title">Green Smoothies: Too Much of a Good Thing?<br/><span>By Auskteez - 2 hours ago</span></p>
+        <div class="img-title"><p>Green Smoothies: Too Much of a Good Thing?<br/><span>By Auskteez - 2 hours ago</span></p></div>
       </div>
       <div class="blog__img">
         <a href="#"><img src="./images/blog2.png" alt="pic"></a>
         <img class="day" src="./images/day2.png" alt="day">
-        <p class="img-title">Growing Food and a “Thirst” for Innovation<br/><span>By Auskteez - 3 hours ago</span></p>
+        <div class="img-title"><p>Growing Food and a “Thirst” for Innovation<br/><span>By Auskteez - 3 hours ago</span></p></div>
       </div>
       <div class="blog__img">
         <a class="blog__img-item" href="#"><img src="./images/blog3.png" alt="pic"></a>
         <img class="day" src="./images/day3.png" alt="day">
-        <p class="img-title">Pesticides & Food: What You Need to Know<br/><span>By Auskteez - 6 hours ago</span></p>
+        <div class="img-title"><p>Pesticides & Food: What You Need to Know<br/><span>By Auskteez - 6 hours ago</span></p></div>
       </div>
     </div>
     <a class="link-btn link-btn_red" href="#">get free now</a>

@@ -461,6 +461,9 @@ padding-top: 15px;
   .about-us__flex-cont img {
     position: static;
   }
+  .sub {
+    background-size: 80%;
+  }
 }
 @media screen and (max-width: 800px) {
   .mobile-menu {

@@ -1,4 +1,4 @@
-/*GENERALE*/
+/*GENERAL*/
 body * {box-sizing: border-box;}
 body {
   font-family: 'Raleway', sans-serif;
@@ -6,7 +6,6 @@ body {
   color: #262626;
   padding: 0;
   margin: 0;
-  /*min-height: 100vh;*/
 }
 a {
   text-decoration: none;
@@ -197,8 +196,7 @@ h1 {
   color: #262626;
 }
 .gallery p {
-  width: 630px;
-  padding: 5px 0 28px;
+  padding: 5px 180px 28px;
   text-align: center;
 }
 .gallery__img-container {
@@ -275,10 +273,10 @@ h1 {
   padding: 80px 0 116px;
 }
 #blog + p {
-  width: 573px;
   color: #ffffff;
   text-align: center;
   margin: 25px 0 34px;
+  padding: 0 180px;
 }
 .blog__img-group {
   display: flex;
@@ -420,7 +418,7 @@ padding-top: 15px;
 .footer__flex-container a:hover {
   opacity: 0.7;
 }
-/*RESPONSIV*/
+/*RESPONSIVE*/
 
 @media screen and (max-width: 1202px) {
   .wrapper {
@@ -501,6 +499,17 @@ padding-top: 15px;
     border-radius: 5px;
   }
 
+
+  .link__group {
+    padding-left: 0;
+  }
+  .gallery p {
+    padding: 5px 10px 28px;
+  }
+  #blog + p {
+    padding: 0 10px;
+  }
+
   .form-container input,
   .form-container textarea,
   .form-container ul {
@@ -522,5 +531,8 @@ padding-top: 15px;
   }
   .sub input {
     width: 200px;
+  }
+  .sub p {
+    max-width: 100%;
   }
 }

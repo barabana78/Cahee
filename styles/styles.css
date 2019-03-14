@@ -227,6 +227,8 @@ h1 {
 .gallery__img-container a:hover {
   opacity: 0.9;
 }
+.gallery__img-container img:hover {
+}
 .link-btn_blu {
   background-color: #5585a2;
   margin-top: 35px;
@@ -284,12 +286,14 @@ h1 {
 }
 .blog__img {
   position: relative;
+  margin: 5px;
 }
 .blog__img a {
   display: block;
 }
-.blog__img a:hover {
+.blog__img-group a:hover {
   opacity: 0.7;
+  transform: translateY(10px);
 }
 .day {
   position: absolute;
@@ -515,24 +519,15 @@ padding-top: 15px;
   .form-container ul {
     width: 200px;
   }
-  .img-title {
-    max-width: 200px;
-  }
-  .img-title p {
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 15px;
-  }
-  .img-title p span {
-    font-size: 10px;
-  }
-  .day {
-    width: 10%;
-  }
   .sub input {
     width: 200px;
   }
   .sub p {
     max-width: 100%;
+  }
+  /*BLOG*/
+  .blog__img-group {
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }

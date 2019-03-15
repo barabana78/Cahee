@@ -252,13 +252,11 @@ h1 {
   font-size: 40px;
 }
 .sub p {
-  width: 550px;
+  max-width: 550px;
   margin-bottom: 28px;
 }
 .sub form {
   display: flex;
-  justify-content: space-between;
-  /*width: 800px;*/
 }
 .sub input {
   display: block;
@@ -335,7 +333,7 @@ h1 {
   color: #262626;
 }
 .contact p {
-  width: 370px;
+  max-width: 370px;
   text-align: center;
 }
 .form-container {
@@ -443,15 +441,23 @@ padding-top: 15px;
   h2 {
     font-size: 50px;
   }
-  h3 {
-    font-size: 20px;
-  }
   header, .sub, .our-services__info {
     background-size: contain;
+  }
+  .contact {
+    background-size: 100% 100%;
   }
   .link__group {
      padding-left: 50px;
    }
+}
+@media screen and (max-width: 840px) {
+  .sub form {
+    flex-direction: column;
+  }
+  .link-btn-green {
+    margin: 20px 0 0;
+  }
 }
 @media screen and (max-width: 800px) {
   .mobile-menu {
@@ -493,44 +499,7 @@ padding-top: 15px;
   }
 
 
-  .gallery p {
-    padding: 5px 10px 28px;
-  }
-  #blog + p {
-    padding: 0 10px;
-  }
 
-  .form-container input,
-  .form-container textarea,
-  .form-container ul {
-    width: 200px;
-  }
-  .sub input {
-    width: 200px;
-  }
-  .sub p {
-    max-width: 100%;
-  }
-  /*Our Services*/
-  .our-services__flex-cont {
-    flex-direction: column-reverse;
-  }
-  .link__group {
-    padding-left: 0;
-  }
-  .link-flex > span:nth-child(1) {
-    width: 200px;
-  }
-  .link-flex > span:nth-child(2) {
-    width: 70px;
-    height: 70px;
-  }
-  .about-us__flex-cont img {
-    position: static;
-  }
-  .our-services__info {
-
-  }
   /*ABOUT US*/
   .about-us__flex-cont {
     flex-direction: column-reverse;
@@ -540,10 +509,88 @@ padding-top: 15px;
   }
   .about-us h2 {
     text-align: center;
+    margin-top: 20px;
   }
+  .about-us__flex-cont img {
+    position: static;
+  }
+  /*Our Services*/
+  .our-services__flex-cont {
+    flex-direction: column-reverse;
+  }
+  .link__group {
+    padding-left: 0;
+  }
+  /*GALLERY*/
+  .gallery, .blog, .contact, .sub {
+    padding: 20px 0;
+  }
+  .gallery p {
+    padding: 5px 0 20px;
+  }
+  .row {
+    flex-direction: column;
+  }
+  .row.padding-bottom > a {
+    width: 100%;
+  }
+  .row.padding-bottom > div {
+    width: 100%;
+    flex-direction: row;
+  }
+  .row.padding-bottom > div > div:first-child {
+    margin-right: 2%;
+  }
+  .row > div {
+    width: 100%;
+  }
+  .row:last-child {
+    flex-direction: row;
+  }
+  .row:last-child > div:first-child {
+     margin-right: 2%;
+   }
+  /*SUB*/
+  .sub input {
+    width: 200px;
+  }
+  .sub p {
+    max-width: 100%;
+  }
+
   /*BLOG*/
+  #blog + p {
+    padding: 0 10px;
+  }
   .blog__img-group {
     flex-wrap: wrap;
     justify-content: center;
   }
+  /*FORM CONTACT*/
+  .form-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 550px) {
+  .form-container input,
+  .form-container textarea,
+  .form-container ul {
+    width: 300px;
+  }
+}
+@media screen and (max-width: 440px) {
+  .link-flex > span:nth-child(1) {
+    width: 200px;
+  }
+  .link-flex > span:nth-child(2) {
+    width: 70px;
+    height: 70px;
+  }
+.sub h3 {
+  text-align: center;
+}
+  .sub form {
+   align-items: center;
+ }
 }

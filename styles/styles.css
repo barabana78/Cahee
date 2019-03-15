@@ -46,8 +46,11 @@ p {
 }
 /*HEADER*/
 header {
-  background: #f9f8fb url("../images/bgHeader.jpg") no-repeat center center;
+  background: #f9f8fb url("../images/bgHeader.jpg") no-repeat 0 0;
   min-height: 100vh;
+  position: relative;
+}
+#svg-animation {
   position: relative;
 }
 
@@ -89,7 +92,7 @@ h1 {
   font-weight: 900;
 }
 .header__info p {
-  width: 370px;
+  max-width: 370px;
 }
 .link-btn_orange {
   background-color: #ff6033;
@@ -118,7 +121,7 @@ h1 {
   left: -50px;
 }
 .about-us__info {
-  width: 500px;
+  max-width: 500px;
   color: #ffffff;
   padding: 160px 0 200px;
 }
@@ -144,8 +147,6 @@ h1 {
 .link-flex {
   display: flex;
   background-color: #ffffff;
-  /*width: 400px;*/
-  /*height: 100px;*/
   font-size: 20px;
   font-weight: 700;
   align-items: center;
@@ -170,10 +171,11 @@ h1 {
 }
 .our-services__info {
   background: url("../images/ourServices.png") no-repeat 50% 50%;
-  min-height: 790px;
   display: flex;
   justify-content: end;
   align-items: center;
+  padding: 25% 0;
+  margin: 10px;
 }
 .our-services__info a {
   color: #ffffff;
@@ -444,28 +446,12 @@ padding-top: 15px;
   h3 {
     font-size: 20px;
   }
-  header {
-    background-size: 80%;
+  header, .sub, .our-services__info {
+    background-size: contain;
   }
   .link__group {
      padding-left: 50px;
    }
-  .our-services__info {
-    background-size: 50%;
-  }
-  .link-flex > span:nth-child(1) {
-    width: 200px;
-  }
-  .link-flex > span:nth-child(2) {
-    width: 70px;
-    height: 70px;
-  }
-  .about-us__flex-cont img {
-    position: static;
-  }
-  .sub {
-    background-size: 80%;
-  }
 }
 @media screen and (max-width: 800px) {
   .mobile-menu {
@@ -489,6 +475,9 @@ padding-top: 15px;
   .dropdown-menu {
     display: none;
   }
+  .dropdown-menu a:hover {
+    color: #FF0000;
+  }
 
   .dropdown-menu .link__nav-decor {
     margin: 0 0 10px 0;
@@ -504,9 +493,6 @@ padding-top: 15px;
   }
 
 
-  .link__group {
-    padding-left: 0;
-  }
   .gallery p {
     padding: 5px 10px 28px;
   }
@@ -524,6 +510,36 @@ padding-top: 15px;
   }
   .sub p {
     max-width: 100%;
+  }
+  /*Our Services*/
+  .our-services__flex-cont {
+    flex-direction: column-reverse;
+  }
+  .link__group {
+    padding-left: 0;
+  }
+  .link-flex > span:nth-child(1) {
+    width: 200px;
+  }
+  .link-flex > span:nth-child(2) {
+    width: 70px;
+    height: 70px;
+  }
+  .about-us__flex-cont img {
+    position: static;
+  }
+  .our-services__info {
+
+  }
+  /*ABOUT US*/
+  .about-us__flex-cont {
+    flex-direction: column-reverse;
+  }
+  .about-us__info {
+    padding: 10px 0 0;
+  }
+  .about-us h2 {
+    text-align: center;
   }
   /*BLOG*/
   .blog__img-group {

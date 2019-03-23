@@ -56,36 +56,46 @@ header {
 
 /*NAVIGATION*/
 .header__nav {
-  padding-top: 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: fixed;
+  width: 100%;
+  background-color: #f9f8fb;
+  z-index: 10;
+  padding: 10px;
 }
 nav {
   display: flex;
   align-items: center;
 }
 .link__nav-decor {
-  margin-left: 40px;
-  padding-top: 6px;
+  padding: 6px 20px;
   font-size: 16px;
   font-weight: 800;
   text-transform: uppercase;
-  border-top: 3px solid transparent;
+  border-radius: 50%;
+  border: 3px solid transparent;
 }
 .link__nav-decor:hover {
-  border-top: 3px solid red;
+  border: 3px solid red;
   cursor: pointer;
 }
 .mobile-menu {
   display: none;
 }
+/*****************************************************************ACTIVE NAV*/
+.active {
+  background-color: #9acd32;
+}
+/****************************************************************************/
+
 /*FRESH LIFE*/
 .header__info {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-top: 80px;
+  padding-top: 200px;
 }
 h1 {
   font-size: 60px;
@@ -274,7 +284,7 @@ h1 {
   background-color: #b07cf7;
   padding: 80px 0 116px;
 }
-#blog + p {
+.blog-p {
   color: #ffffff;
   text-align: center;
   margin: 25px 0 34px;
@@ -343,7 +353,7 @@ h1 {
   justify-content: space-between;
 }
 .contact form {
- /*width: 500px;*/
+  /*width: 500px;*/
 }
 .form-container label {
   display: block;
@@ -367,7 +377,7 @@ h1 {
   height: 50px;
 }
 .form-container textarea {
-padding-top: 15px;
+  padding-top: 15px;
 }
 .form-container input:focus,
 .form-container input:hover,
@@ -448,8 +458,8 @@ padding-top: 15px;
     background-size: 100% 100%;
   }
   .link__group {
-     padding-left: 50px;
-   }
+    padding-left: 50px;
+  }
 }
 @media screen and (max-width: 840px) {
   .sub form {
@@ -495,7 +505,7 @@ padding-top: 15px;
     top: 100%;
     right: 0;
     padding: 15px 20px 5px;
-    border-radius: 5px;
+    text-align: center;
   }
 
 
@@ -548,8 +558,8 @@ padding-top: 15px;
     flex-direction: row;
   }
   .row:last-child > div:first-child {
-     margin-right: 2%;
-   }
+    margin-right: 2%;
+  }
   /*SUB*/
   .sub input {
     width: 200px;
@@ -559,7 +569,7 @@ padding-top: 15px;
   }
 
   /*BLOG*/
-  #blog + p {
+  .blog-p {
     padding: 0 10px;
   }
   .blog__img-group {
@@ -587,10 +597,10 @@ padding-top: 15px;
     width: 70px;
     height: 70px;
   }
-.sub h3 {
-  text-align: center;
-}
+  .sub h3 {
+    text-align: center;
+  }
   .sub form {
-   align-items: center;
- }
+    align-items: center;
+  }
 }

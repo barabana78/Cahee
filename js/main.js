@@ -1,10 +1,11 @@
 'use strict';
-
+//animation LOGO when the page loads
+document.getElementById('svg-animation').removeAttribute('style');
 TweenMax.from('#svg-animation', 2, {
     scale: 0,
 });
 
-TweenLite.from('#svg-animation', 3, {bottom: "70px", ease:Bounce.easeOut});
+TweenLite.from('#svg-animation', 3, {bottom: "70px", ease:Bounce.easeOut});//page down
 
 TweenMax.to('.cls-1', 2, {
     fill: "#FF0000",
@@ -16,8 +17,56 @@ TweenMax.to('.cls-1', 2, {
     }
 });
 function svgAnime() {
-    TweenLite.from('#svg-animation', 3, {bottom: "70px", ease:Bounce.easeOut});
+    TweenLite.from('#svg-animation', 3, {bottom: "70px", ease:Bounce.easeOut});//on click
 }
+//animation header when the page loads
+document.getElementById('menu').removeAttribute('style');
+document.getElementById('mobileMenu').removeAttribute('style');
+TweenMax.from('#menu, #mobileMenu', 3, {
+    bottom: 70,
+});
+document.getElementById('headerInfoAnimation').removeAttribute('style');
+TweenMax.from('#headerInfoAnimation', 3, {
+    right: 500,
+});
+document.getElementById('scrollTop').removeAttribute('style');
+TweenMax.from('#scrollTop', 3, {
+    top: 100,
+});
+var BG = document.getElementById('home').style.background;
+TweenMax.from('BG', 3, {
+    top: 100,
+});
+
+//MODAL
+function showModal() {
+    document.getElementById('modal').classList.add("open");
+}
+function clouseModal() {
+    var x = document.getElementsByClassName('open');
+    for (var i = 0; i < x.length; i++) {
+        x[i].classList.remove("open")
+    }
+}
+document.onkeydown = function(event) {
+      if (event.keyCode === 27) clouseModal();
+};
+
+/*
+//blog item animation
+function blogAnimation() {
+    TweenMax.from('#rightItem', 3, {
+        left: 500,
+    });
+    TweenMax.from('#centerItem', 3, {
+        scale: 0,
+    });
+    TweenMax.from('#leftItem', 3, {
+        right: 500,
+    });
+}
+*/
+
 
 // ПЛАВНЫЙ СКРОЛЛ
 $(document).ready(function(){
@@ -76,7 +125,6 @@ $sections.each(function() {
     var id = $(this).attr('id');
     sectionIdTonavigationLink[id] = $('.link__nav-decor > a[href=\\#' + id + ']');
 });
-
 // throttle function, enforces a minimum time interval
 function throttle(fn, interval) {
     var lastCall, timeoutId;

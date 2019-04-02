@@ -49,24 +49,9 @@ function clouseModal() {
     }
 }
 document.onkeydown = function(event) {
-      if (event.keyCode === 27) clouseModal();
+      if (event.keyCode === 27) clouseModal();//close modal widow
+    document.getElementById('menu-toggle').checked = false;//close nav menu
 };
-
-/*
-//blog item animation
-function blogAnimation() {
-    TweenMax.from('#rightItem', 3, {
-        left: 500,
-    });
-    TweenMax.from('#centerItem', 3, {
-        scale: 0,
-    });
-    TweenMax.from('#leftItem', 3, {
-        right: 500,
-    });
-}
-*/
-
 
 // ПЛАВНЫЙ СКРОЛЛ
 $(document).ready(function(){
@@ -76,7 +61,7 @@ $(document).ready(function(){
 //забираем идентификатор блока с атрибута href
         var id  = $(this).attr('href'),
 //узнаем высоту от начала страницы до блока на который ссылается якорь
-            top = $(id).offset().top + 2;
+            top = $(id).offset().top - 64;
 //анимируем переход на расстояние - top за 1500 мс
         $('body,html').animate({scrollTop: top}, 1500);
     });
@@ -126,7 +111,7 @@ $sections.each(function() {
     sectionIdTonavigationLink[id] = $('.link__nav-decor > a[href=\\#' + id + ']');
 });
 // throttle function, enforces a minimum time interval
-function throttle(fn, interval) {
+/*function throttle(fn, interval) {
     var lastCall, timeoutId;
     return function () {
         var now = new Date().getTime();
@@ -143,11 +128,11 @@ function throttle(fn, interval) {
             fn.call();
         }
     };
-}
+}*/
 
 function highlightNavigation() {
     // get the current vertical position of the scroll bar
-    var scrollPosition = $(window).scrollTop();
+    var scrollPosition = $(window).scrollTop() + 66;
 
     // iterate the sections
     $sections.each(function() {
@@ -174,9 +159,20 @@ function highlightNavigation() {
     });
 }
 
-$(window).scroll( throttle(highlightNavigation,100) );
+// $(window).scroll( throttle(highlightNavigation,100) );
+$(window).scroll(highlightNavigation);
 
 // if you don't want to throttle the function use this instead:
 // $(window).scroll( highlightNavigation );
+
+    // INPUTS EVENTS
+    $(".input_1 input,.textarea_1 textarea").focus(function(){
+        $(this).next("span").addClass("activeInput");
+    });
+    $(".input_1 input, .textarea_1 textarea").blur(function(){
+        if($(this).val() === ""){
+            $(this).next("span").removeClass("activeInput");
+        }
+    });
 
 });

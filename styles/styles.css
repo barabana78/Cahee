@@ -167,7 +167,7 @@ h1 {
   top:10%;
   width: fit-content;
   z-index: 101;
-  transform: translateY(-300px); translateZ(0);
+  transform: translateY(-300px) translateZ(0);
   background-size: contain;
 }
 .modal.open {
@@ -202,6 +202,7 @@ h1 {
 }
 .link-btn_lblu {
   background-color: rgba(112, 191, 255, 0.5);
+  border: none;
 }
 .link-btn_lblu:hover {
   background-color: rgba(112, 191, 255, 1);
@@ -339,16 +340,45 @@ h1 {
 .sub form {
   display: flex;
 }
-.sub input {
+.sub .input_1 input {
+  font-size: 25px;
+}
+.input_1{
   display: block;
   width: 572px;
   height: 56px;
-  font-size: 15px;
-  padding-left: 10px;
   background-color: rgba(255, 255, 255, 0.5);
+  position: relative;
+}
+.input_1 input {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  background-color: transparent;
+  z-index: 2;
+}
+.input_1 > span {
+  font-size: 25px;
+  position: absolute;
+  top:50%;
+  left: 20px;
+  -webkit-transform:translateY(-50%);
+  -ms-transform:translateY(-50%);
+  transform:translateY(-50%);
+  -webkit-transition:all .2s ease-in-out;
+  transition:all .2s ease-in-out;
+  z-index: 1;
+  border-color: transparent;
+}
+.input_1 > span.activeInput {
+  color: #7CA50A;
+  font-size: 15px;
+  top:-20%;
+  left: 10px;
+  padding: 5px;
 }
 .sub input:hover {
-  background-color: rgba(255, 255, 255, 1);
+  /*background-color: rgba(255, 255, 255, 1);*/
 }
 .link-btn-green {
   background-color: rgba(150, 185, 44, 0.5);
@@ -506,6 +536,9 @@ h1 {
   color: #b9b9b9;
   font-size: 16px;
 }
+.d-logo {
+  padding: 0 10px;
+}
 .footer__flex-container span {
   font-weight: 700;
   color: #f72b3b;
@@ -647,8 +680,12 @@ h1 {
     margin-right: 2%;
   }
   /*SUB*/
-  .sub input {
+  .input_1 {
     width: 200px;
+  }
+  .sub .input_1 input,
+  .input_1 > span {
+    font-size: 16px;
   }
   .sub p {
     max-width: 100%;

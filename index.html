@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Cahee</title>
+  <link href="./js/fm.revealator.jquery.min.css" rel="stylesheet" type="text/css">
+  <link href="./js/animate.css" rel="stylesheet" type="text/css">
   <link href="styles/styles.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,700,800,900" rel="stylesheet">
   <link rel="shortcat icon" href="favicon.png">
@@ -71,7 +73,7 @@
 <!--ABOUT US-->
 <section class="about-us section" id="scroll">
   <div class="about-us__flex-cont wrapper">
-    <div><img src="./images/about.png" alt="pic"></div>
+    <div><img class="wow rollIn" data-wow-offset="300" src="./images/about.png" alt="pic"></div>
     <div class="about-us__info">
       <a href="#"><h2>About Us</h2></a>
       <p>Abore Cahee magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
@@ -98,25 +100,25 @@
   <div class="our-services__flex-cont wrapper">
 
     <div class="link__group">
-      <a class="link-flex" href="#">
+      <a class="wow bounceInLeft link-flex" href="#">
         <span>Online Shopping</span>
         <span>
           <img src="images/iconOurServ1.svg" alt="ico">
         </span>
       </a>
-      <a class="link-flex" href="#">
+      <a class="wow bounceInLeft link-flex" href="#">
         <span>Quality Product</span>
         <span>
           <img src="images/iconOurServ2.svg" alt="ico">
         </span>
       </a>
-      <a class="link-flex" href="#">
+      <a class="wow bounceInLeft link-flex" href="#">
         <span>Domestic & International Delivery</span>
         <span>
           <img src="images/iconOurServ3.svg" alt="ico">
         </span>
       </a>
-      <a class="link-flex" href="#">
+      <a class="wow bounceInLeft link-flex" href="#">
         <span>Well Organized</span>
         <span>
           <img src="images/iconOurServ4.svg" alt="ico">
@@ -139,15 +141,15 @@
       veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
     <div class="gallery__img-container">
       <div class="row padding-bottom">
-        <a href="#"><img src="./images/img1.png" alt="pic"></a>
+        <a href="#"><img class="revealator-slideright revealator-once" src="./images/img1.png" alt="pic"></a>
         <div>
-          <div><a href="#"><img src="./images/img2.png" alt="pic"></a></div>
-          <div><a href="#"><img src="./images/img3.png" alt="pic"></a></div>
+          <div><a href="#"><img class="revealator-slideleft revealator-once" src="./images/img2.png" alt="pic"></a></div>
+          <div><a href="#"><img class="revealator-slideleft revealator-once" src="./images/img3.png" alt="pic"></a></div>
         </div>
       </div>
       <div class="row">
-        <div><a href="#"><img src="./images/img4.png" alt="pic"></a></div>
-        <div><a href="#"><img src="./images/img5.png" alt="pic"></a></div>
+        <div><a href="#"><img class="revealator-slideup revealator-once" src="./images/img4.png" alt="pic"></a></div>
+        <div><a href="#"><img class="revealator-slideup revealator-once" src="./images/img5.png" alt="pic"></a></div>
       </div>
     </div>
     <a class="link-btn link-btn_blu" href="#"> get free now</a>
@@ -158,12 +160,13 @@
 <!--SUB-->
 <section class="sub">
   <div class="sub__flex-container wrapper">
-    <h3>Subscribe To Us</h3>
+    <h3 class="wow lightSpeedIn" data-wow-delay="1s">Subscribe To Us</h3>
     <p>Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
       Ut enim ad minim veniam.</p>
     <form method="get" novalidate>
-      <label>
-        <input type="email" placeholder="Your email address...">
+      <label class="input_1" style="margin-bottom: 30px">
+        <input type="email">
+        <span>Your email address...</span>
       </label>
       <button class="link-btn link-btn-green" type="submit">subscribe</button>
     </form>
@@ -178,7 +181,7 @@
     <p class="blog-p">Dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
       commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit.</p>
     <div class="blog__img-group">
-      <a href="#"><div id="leftItem" class="blog__img">
+      <a href="#"><div class="blog__img">
         <img src="./images/blog1.jpg" alt="pic">
         <img class="day" src="./images/day1.png" alt="day">
         <div class="img-title"><p>Green Smoothies: Too Much of a Good Thing?<br/><span>By Auskteez - 2 hours ago</span></p></div>
@@ -225,13 +228,18 @@
 <footer class="footer">
   <div class="footer__flex-container wrapper">
     <div>© 2015 Company. All right reserved.</div>
-    <div><a href="#"><img src="./images/logo-small.png" alt="logo"></a></div>
+    <div class="d-logo"><a href="#"><img src="./images/logo-small.png" alt="logo"></a></div>
     <div>Made with<span> love </span>by Auskteez</div>
   </div>
 </footer>
 <!--/FOOTER-->
 <script src="https://code.jquery.com/jquery-3.3.1.min.js" type="application/javascript"></script>
 <script src="js/src/minified/TweenMax.min.js" type="application/javascript"></script>
+<script type="application/javascript" src="./js/fm.revealator.jquery.min.js"></script>
+<script type="application/javascript" src="./js/wow.min.js"></script>
+<script>
+    new WOW().init();
+</script>
 <script type="application/javascript" src="./js/main.js"></script>
 </body>
 </html>
